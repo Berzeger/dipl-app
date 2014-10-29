@@ -1,10 +1,11 @@
 %h1 Listing theses
 
-%table
+%table{ class: "table table-striped" }
   %tr
     %th Name
     %th Abstract
     %th Faculty
+    %th Author
     %th Language
     %th Defended
     %th
@@ -16,6 +17,7 @@
       %td= thesis.name
       %td= thesis.abstract
       %td= thesis.faculty.name
+      %td= thesis.author.firstname + ' ' + thesis.author.surname
       %td= thesis.language
       %td= thesis.defended
       %td= link_to 'Show', thesis
@@ -24,4 +26,4 @@
 
 %br
 
-= link_to 'New Thesis', new_thesis_path
+= link_to 'New Thesis', new_thesis_path, class:'btn btn-primary'

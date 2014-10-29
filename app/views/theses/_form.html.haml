@@ -13,6 +13,14 @@
     = f.label :faculty
     = f.select(:faculty_id, faculties)
   .field
+    = f.fields_for :author do |ff|
+      .field
+        = ff.label :firstname
+        = ff.text_field :firstname
+      .field
+        = ff.label :surname
+        = ff.text_field :surname
+  .field
     = f.label :abstract
     = f.text_area :abstract
   .field
