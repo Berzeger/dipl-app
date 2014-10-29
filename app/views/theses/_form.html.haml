@@ -10,6 +10,9 @@
     = f.label :name
     = f.text_field :name
   .field
+    = f.label :faculty
+    = f.select(:faculty_id, faculties)
+  .field
     = f.label :abstract
     = f.text_area :abstract
   .field
